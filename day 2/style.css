@@ -1,0 +1,160 @@
+/* 1. Box-sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. General page styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: white;
+}
+
+/* 3. Header */
+header {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 15px;
+}
+
+/* 4. Navigation using Flexbox */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+/* 5. Navigation hover effect */
+nav a:hover {
+  background-color: #555;
+}
+
+/* 6. Main content */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 7. Sections */
+section {
+  margin-bottom: 30px;
+}
+
+/* 8. Features list using CSS Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  padding: 20px;
+  background: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* 9. Shortcuts table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #f2f2f2;
+}
+
+/* 10. Feedback form */
+#feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+}
+
+/* 11. Note form */
+#note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#note-form input {
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+}
+
+/* 12. Buttons */
+button {
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* 13. Footer */
+footer {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  background: #f2f2f2;
+}
+
+/* 14. Responsive design */
+@media (max-width: 600px) {
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  #note-form,
+  #feedback-form {
+    width: 100%;
+  }
+}
